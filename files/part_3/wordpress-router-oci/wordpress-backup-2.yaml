@@ -1,0 +1,20 @@
+---
+apiVersion: mysql.oracle.com/v1alpha1
+kind: Backup
+metadata:
+  name: mysql-backup-2
+spec:
+  executor:
+    mysqldump:
+      databases:
+        - name: wordpress
+  storageProvider:
+    s3:
+      endpoint: dynbmcsandbox.compat.objectstorage.us-phoenix-1.oraclecloud.com
+      region:   us-phoenix-1 
+      bucket:   mysql-backups 
+      forcePathStyle: true
+      credentialsSecret:
+          name: s3-credentials
+  cluster:
+    name: mysql-wordpress

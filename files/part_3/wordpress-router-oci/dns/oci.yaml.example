@@ -1,0 +1,10 @@
+auth:
+  region: us-phoenix-1
+  tenancy: ocid1.tenancy.oc1..aaaaaaaaxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+  user: ocid1.user.oc1..aaaaaaaaxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+  key: |
+    -----BEGIN RSA PRIVATE KEY-----
+    kEyCoNTents hEre12388787
+    -----END RSA PRIVATE KEY-----
+  fingerprint: de:ea:dd:bb:ee:aa:ff:ff:ac:ee:00:00:00:00:00:ff
+compartment: ocid1.compartment.oc1..aaaaaaaaf7xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx

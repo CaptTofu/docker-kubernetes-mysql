@@ -1,0 +1,44 @@
+version: '3.3'
+
+services:
+  mysql:
+    image: mysql:5.7
+    ports:
+     - "3600:3600"
+    configs:
+      - source: my_cnf
+        target: /etc/my.cnf
+    volumes:
+     - type: volume
+       source: mysql_data
+       target: /var/lib/mysql
+     - type: volume
+       source: mysql_log
+       target: /var/log/mysql
+     - type: bind
+       source: ./etc/my.cnf
+       target: /etc/my.cnf
+    environment:
+      MYSQL_ROOT_PASSWORD: db.test-1
+      MYSQL_DATABASE: wordpress
+      MYSQL_USER: wordpress
+      MYSQL_PASSWORD: wordpress
+
+  wordpress:
+    depends_on:
+      - mysql
+    image: wordpress:latest
+    ports:
+      - "80:80"
+    restart: always
+    environment:
+       WORDPRESS_DB_HOST: mysql:3306
+       WORDPRESS_DB_USER: wordpress
+       WORDPRESS_DB_PASSWORD: wordpress
+       WORDPRESS_DB_NAME: wordpress
+volumes:
+    mysql_data: {}
+    mysql_log: {}
+configs:
+  my_cnf:
+    file: ./etc/my.cnf
