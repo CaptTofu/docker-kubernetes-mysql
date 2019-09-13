@@ -19,7 +19,7 @@ services:
        source: ./etc/my.cnf
        target: /etc/my.cnf
     environment:
-      MYSQL_ROOT_PASSWORD: db.test-1
+      MYSQL_ROOT_PASSWORD: wordpress-DB.33
       MYSQL_DATABASE: wordpress
       MYSQL_USER: wordpress
       MYSQL_PASSWORD: wordpress

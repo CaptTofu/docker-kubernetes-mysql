@@ -1,0 +1,514 @@
+    1  exit
+    2  kubectl get po
+    3  git
+    4  ssh-keygen 
+    5  vi .ssh/authorized_keys 
+    6  git clone git@github.com:CaptTofu/docker-kubernetes-mysql.git
+    7  cd docker-kubernetes-mysql/
+    8  docker ps
+    9  uname -a
+   10  cat /etc/redhat-release 
+   11  cat /etc/oracle-release 
+   12  sudo yum search docker
+   13  sudo yum install docker-engine
+   14  sudo yum search docker-systemd
+   15  sudo yum search systemd-docker
+   16  docker ps
+   17  sudo docker ps
+   18  sudo systemctl start docker
+   19  exit
+   20  docker ps
+   21  sudo groupmod 
+   22  sudo usermod -aG docker $USER
+   23  docker ps
+   24  exit
+   25  docker ps
+   26  ls
+   27  cd docker-kubernetes-mysql/
+   28  ls
+   29  cd files/
+   30  ls
+   31  cd part_1/
+   32  ls
+   33  vi steps.txt 
+   34  git pull origin master
+   35  ls
+   36  git remote update
+   37  ls
+   38  git pull
+   39  ls
+   40  git pull origin master
+   41  ls
+   42  vi index.md 
+   43  mkdir -p $HOME/docker/volumes/data
+   44  mkdir $HOME/docker/volumes/etc
+   45  mkdir $HOME/docker/volumes/log
+   46  sudo chown -R 999:999 $HOME/docker/volumes/*
+   47  vi .ssh/authorized_keys 
+   48  exit
+   49  ls
+   50  vi .ssh/authorized_keys 
+   51  ls
+   52  cd docker-kubernetes-mysql/
+   53  ls
+   54  brew update git
+   55  git --version
+   56  sudo apt-get upgrade
+   57  sudo yum update
+   58  sudo yum upgrade git
+   59  git --version
+   60  ls
+   61  ls volumes/
+   62  cd ..
+   63  ls
+   64  find docker
+   65  rm -rf docker
+   66  cd docker-kubernetes-mysql/
+   67  ls
+   68  cd files/
+   69  ls
+   70  mkdir -p $HOME/docker-kubernetes-mysql/volumes/data
+   71  export DATAVOL=$HOME/docker-kubernetes-mysql/volumes/data
+   72  mkdir $HOME/docker-kubernetes-mysql/volumes/etc
+   73  export ETCVOL=$HOME/docker-kubernetes-mysql/volumes/etc
+   74  mkdir $HOME/docker-kubernetes-mysql/volumes/log
+   75  export LOGVOL=$HOME/docker-kubernetes-mysql/volumes/logs
+   76  sudo chown -R 999:999 $HOME/docker-kubernetes-mysql/volumes/*
+   77  docker run -d -e MYSQL_RANDOM_ROOT_PASSWORD=1 --rm --network host --name=mysql8.0 --mount type=bind,src=$DATAVOL,dst=/var/lib/mysql --mount type=bind,src=$ETCVOL/my.cnf,dst=/etc/my.cnf,readonly --mount type=bin,src=$LOGVOL,dst=/var/log/mysql --expose 3600 mysql:8.0
+   78  docker version
+   79  docker run -d -e MYSQL_RANDOM_ROOT_PASSWORD=1 --rm --network host --name=mysql8.0 --mount type=bind,src=$DATAVOL,dst=/var/lib/mysql --mount type=bind,src=$ETCVOL/my.cnf,dst=/etc/my.cnf,readonly --mount type=bind,src=$LOGVOL,dst=/var/log/mysql --expose 3600 mysql:8.0
+   80  cd ..
+   81  ls
+   82  export LOGVOL=$HOME/docker-kubernetes-mysql/volumes/log
+   83  docker run -d -e MYSQL_RANDOM_ROOT_PASSWORD=1 --rm --network host --name=mysql8.0 --mount type=bind,src=$DATAVOL,dst=/var/lib/mysql --mount type=bind,src=$ETCVOL/my.cnf,dst=/etc/my.cnf,readonly --mount type=bind,src=$LOGVOL,dst=/var/log/mysql --expose 3600 mysql:8.0
+   84  docker ps
+   85  docker ps -a
+   86  docker run -d -e MYSQL_RANDOM_ROOT_PASSWORD=1 --rm --network host --name=mysql8.0 --mount type=bind,src=$DATAVOL,dst=/var/lib/mysql --mount type=bind,src=$ETCVOL/my.cnf,dst=/etc/my.cnf,readonly --mount type=bind,src=$LOGVOL,dst=/var/log/mysql --expose 3600 mysql:8.
+   87  docker run -d -e MYSQL_RANDOM_ROOT_PASSWORD=1 --rm --network host --name=mysql8.0 --mount type=bind,src=$DATAVOL,dst=/var/lib/mysql --mount type=bind,src=$ETCVOL/my.cnf,dst=/etc/my.cnf,readonly --mount type=bind,src=$LOGVOL,dst=/var/log/mysql --expose 3600 mysql:8.0.17
+   88  vi .bashrc 
+   89  . .bashrc 
+   90  docker ps
+   91  docker network
+   92  docker network ls
+   93  ifconfig
+   94  ls
+   95  vi volumes/etc/my.cnf 
+   96  exit
+   97  cat hist.txt 
+   98  docker run -e MYSQL_RANDOM_ROOT_PASSWORD=1 --rm --network host --name=mysql8.0 --mount type=bind,src=$DATAVOL,dst=/var/lib/mysql --mount type=bind,src=$ETCVOL/my.cnf,dst=/etc/my.cnf,readonly --mount type=bind,src=$LOGVOL,dst=/var/log/mysql --expose 3600 mysql:8.0.17
+   99  env
+  100  echo $DATAVOL
+  101  ls -lh
+  102  docker run -d -e MYSQL_RANDOM_ROOT_PASSWORD=1 --rm --network host --name=mysql8.0 --mount type=bind,src=$DATAVOL,dst=/var/lib/mysql --mount type=bind,src=$ETCVOL/my.cnf,dst=/etc/my.cnf,readonly --mount type=bind,src=$LOGVOL,dst=/var/log/mysql --expose 3600 mysql:8.0.17
+  103  docker ps
+  104  docker logs -f f10
+  105  docker run -e MYSQL_RANDOM_ROOT_PASSWORD=1 --rm --network host --name=mysql8.0 --mount type=bind,src=$DATAVOL,dst=/var/lib/mysql --mount type=bind,src=$ETCVOL/my.cnf,dst=/etc/my.cnf,readonly --mount type=bind,src=$LOGVOL,dst=/var/log/mysql --expose 3600 mysql:8.0.17
+  106  ls -lh
+  107  cd docker-kubernetes-mysql/
+  108  ls
+  109  ls -lh volumes/data/
+  110  ls -lh volumes/
+  111  vi /etc/passwd
+  112  ls -l
+  113  ls -lh volumes/data/
+  114  ls -lh volumes
+  115  docker run -e MYSQL_RANDOM_ROOT_PASSWORD=1 --rm --network host --name=mysql8.0 --mount type=bind,src=$DATAVOL,dst=/var/lib/mysql --mount type=bind,src=$ETCVOL/my.cnf,dst=/etc/my.cnf,readonly --mount type=bind,src=$LOGVOL,dst=/var/log/mysql --expose 3600 mysql:8.0.17
+  116  docker run --entrypoint=/bin/bash -e MYSQL_RANDOM_ROOT_PASSWORD=1 --rm --network host --name=mysql8.0 --mount type=bind,src=$DATAVOL,dst=/var/lib/mysql --mount type=bind,src=$ETCVOL/my.cnf,dst=/etc/my.cnf,readonly --mount type=bind,src=$LOGVOL,dst=/var/log/mysql --expose 3600 mysql:8.0.17
+  117  docker -it run --entrypoint=/bin/bash -e MYSQL_RANDOM_ROOT_PASSWORD=1 --rm --network host --name=mysql8.0 --mount type=bind,src=$DATAVOL,dst=/var/lib/mysql --mount type=bind,src=$ETCVOL/my.cnf,dst=/etc/my.cnf,readonly --mount type=bind,src=$LOGVOL,dst=/var/log/mysql --expose 3600 mysql:8.0.17
+  118  docker run -it --entrypoint=/bin/bash -e MYSQL_RANDOM_ROOT_PASSWORD=1 --rm --network host --name=mysql8.0 --mount type=bind,src=$DATAVOL,dst=/var/lib/mysql --mount type=bind,src=$ETCVOL/my.cnf,dst=/etc/my.cnf,readonly --mount type=bind,src=$LOGVOL,dst=/var/log/mysql --expose 3600 mysql:8.0.17
+  119  ls
+  120  ls volumes/
+  121  chown -R opc volumes/*
+  122  sudo chown -R opc volumes/*
+  123  ls -lh volumes/data/
+  124  docker run -it --entrypoint=/bin/bash -e MYSQL_RANDOM_ROOT_PASSWORD=1 --rm --network host --name=mysql8.0 --mount type=bind,src=$DATAVOL,dst=/var/lib/mysql --mount type=bind,src=$ETCVOL/my.cnf,dst=/etc/my.cnf,readonly --mount type=bind,src=$LOGVOL,dst=/var/log/mysql --expose 3600 mysql:8.0.17
+  125  cd volumes/
+  126  ls
+  127  ls -lh
+  128  ls -l ~/
+  129  ls -lh
+  130  cd data/
+  131  ls
+  132  ls -lh
+  133  ls
+  134  cd ..
+  135  ls
+  136  ls -lh
+  137  chgrp -R opc *
+  138  docker run -it --entrypoint=/bin/bash -e MYSQL_RANDOM_ROOT_PASSWORD=1 --rm --network host --name=mysql8.0 --mount type=bind,src=$DATAVOL,dst=/var/lib/mysql --mount type=bind,src=$ETCVOL/my.cnf,dst=/etc/my.cnf,readonly --mount type=bind,src=$LOGVOL,dst=/var/log/mysql --expose 3600 mysql:8.0.17
+  139  ls -lh
+  140  chown -R root:root *
+  141  sudo chown -R root:root *
+  142  ls -lh
+  143  docker run -it --entrypoint=/bin/bash -e MYSQL_RANDOM_ROOT_PASSWORD=1 --rm --network host --name=mysql8.0 --mount type=bind,src=$DATAVOL,dst=/var/lib/mysql --mount type=bind,src=$ETCVOL/my.cnf,dst=/etc/my.cnf,readonly --mount type=bind,src=$LOGVOL,dst=/var/log/mysql --expose 3600 mysql:8.0.17
+  144  ls -lh
+  145  cd ..
+  146  ls
+  147  docker run -it --entrypoint=/bin/bash -e MYSQL_RANDOM_ROOT_PASSWORD=1 --rm --network host --name=mysql8.0 -v $DATAVOL:dst=/var/lib/mysql -v $ETCVOL/my.cnf:/etc/my.cnf -v $LOGVOL:/var/log/mysql --expose 3600 mysql:8.0.17
+  148  docker run -it --entrypoint=/bin/bash -e MYSQL_RANDOM_ROOT_PASSWORD=1 --rm --network host --name=mysql8.0 -v $DATAVOL:/var/lib/mysql -v $ETCVOL/my.cnf:/etc/my.cnf -v $LOGVOL:/var/log/mysql --expose 3600 mysql:8.0.17
+  149  ls -lh
+  150  sudo chown -R 999:999 volumes/data/
+  151  docker run -it --entrypoint=/bin/bash -e MYSQL_RANDOM_ROOT_PASSWORD=1 --rm --network host --name=mysql8.0 -v $DATAVOL:/var/lib/mysql -v $ETCVOL/my.cnf:/etc/my.cnf -v $LOGVOL:/var/log/mysql --expose 3600 mysql:8.0.17
+  152  chcon -Rt svirt_sandbox_file_t /path/to/volume
+  153  sudo chcon -Rt svirt_sandbox_file_t /home/opc/docker-kubernetes-mysql/volumes/data
+  154  sudo chcon -Rt svirt_sandbox_file_t /home/opc/docker-kubernetes-mysql/volumes/etc
+  155  sudo chcon -Rt svirt_sandbox_file_t /home/opc/docker-kubernetes-mysql/volumes/log/
+  156  docker run -it --entrypoint=/bin/bash -e MYSQL_RANDOM_ROOT_PASSWORD=1 --rm --network host --name=mysql8.0 -v $DATAVOL:/var/lib/mysql -v $ETCVOL/my.cnf:/etc/my.cnf -v $LOGVOL:/var/log/mysql --expose 3600 mysql:8.0.17
+  157  history
+  158  docker run -d -e MYSQL_RANDOM_ROOT_PASSWORD=1 --rm --network host --name=mysql8.0 --mount type=bind,src=$DATAVOL,dst=/var/lib/mysql --mount type=bind,src=$ETCVOL/my.cnf,dst=/etc/my.cnf,readonly --mount type=bind,src=$LOGVOL,dst=/var/log/mysql --expose 3600 mysql:8.0.17
+  159  docker ps
+  160  docker logs -f 8861
+  161  docker
+  162  docker ps
+  163  ls
+  164  vi volumes/etc/my.cnf 
+  165  ls -lh
+  166  ls -lh volumes/
+  167  sudo chown -R opc:opc volumes/*
+  168  docker run -d -e MYSQL_RANDOM_ROOT_PASSWORD=1 --rm --network host --name=mysql8.0 --mount type=bind,src=$DATAVOL,dst=/var/lib/mysql --mount type=bind,src=$ETCVOL/my.cnf,dst=/etc/my.cnf,readonly --mount type=bind,src=$LOGVOL,dst=/var/log/mysql --expose 3600 mysql:8.0.17
+  169  docker ps
+  170  docker run -d -e MYSQL_RANDOM_ROOT_PASSWORD=1 --network host --name=mysql8.0 --mount type=bind,src=$DATAVOL,dst=/var/lib/mysql --mount type=bind,src=$ETCVOL/my.cnf,dst=/etc/my.cnf,readonly --mount type=bind,src=$LOGVOL,dst=/var/log/mysql --expose 3600 mysql:8.0.17
+  171  docker logs 6
+  172  vi volumes/etc/my.cnf 
+  173  docker run -d -e MYSQL_RANDOM_ROOT_PASSWORD=1 --rm --network host --name=mysql8.0 --mount type=bind,src=$DATAVOL,dst=/var/lib/mysql --mount type=bind,src=$ETCVOL/my.cnf,dst=/etc/my.cnf,readonly --mount type=bind,src=$LOGVOL,dst=/var/log/mysql --expose 3600 mysql:8.0.17
+  174  docker rm /mysql8.0
+  175  docker run -d -e MYSQL_RANDOM_ROOT_PASSWORD=1 --rm --network host --name=mysql8.0 --mount type=bind,src=$DATAVOL,dst=/var/lib/mysql --mount type=bind,src=$ETCVOL/my.cnf,dst=/etc/my.cnf,readonly --mount type=bind,src=$LOGVOL,dst=/var/log/mysql --expose 3600 mysql:8.0.17
+  176  docker logs -f 
+  177  docker run -e MYSQL_RANDOM_ROOT_PASSWORD=1 --rm --network host --name=mysql8.0 --mount type=bind,src=$DATAVOL,dst=/var/lib/mysql --mount type=bind,src=$ETCVOL/my.cnf,dst=/etc/my.cnf,readonly --mount type=bind,src=$LOGVOL,dst=/var/log/mysql --expose 3600 mysql:8.0.17
+  178  ls
+  179  vi volumes/etc/my.cnf 
+  180  docker run -e MYSQL_RANDOM_ROOT_PASSWORD=1 --rm --network host --name=mysql8.0 --mount type=bind,src=$DATAVOL,dst=/var/lib/mysql --mount type=bind,src=$ETCVOL/my.cnf,dst=/etc/my.cnf,readonly --mount type=bind,src=$LOGVOL,dst=/var/log/mysql --expose 3600 mysql:8.0.17
+  181  ps auxww|grep mysql
+  182  sudo docker run -e MYSQL_RANDOM_ROOT_PASSWORD=1 --rm --network host --name=mysql8.0 --mount type=bind,src=$DATAVOL,dst=/var/lib/mysql --mount type=bind,src=$ETCVOL/my.cnf,dst=/etc/my.cnf,readonly --mount type=bind,src=$LOGVOL,dst=/var/log/mysql --expose 3600 mysql:8.0.17
+  183  vi volumes/etc/
+  184  vi volumes/etc/my.cnf 
+  185  history
+  186  history > hist.txt
+  187  tmux 
+  188  sudo yum install tmux
+  189  tmux 
+  190  ls volumes/
+  191  ls -h
+  192  sudo chown -R 999:999 volumes/data/
+  193  sudo chown -R 999:999 volumes/log/
+  194  cat hist.txt 
+  195  sudo docker run -e MYSQL_RANDOM_ROOT_PASSWORD=1 --rm --network host --name=mysql8.0 --mount type=bind,src=$DATAVOL,dst=/var/lib/mysql --mount type=bind,src=$ETCVOL/my.cnf,dst=/etc/my.cnf,readonly --mount type=bind,src=$LOGVOL,dst=/var/log/mysql --expose 3600 mysql:8.0.17
+  196  docker run -d -e MYSQL_RANDOM_ROOT_PASSWORD=1 --rm --network host --name=mysql8.0 --mount type=bind,src=$DATAVOL,dst=/var/lib/mysql --mount type=bind,src=$ETCVOL/my.cnf,dst=/etc/my.cnf,readonly --mount type=bind,src=$LOGVOL,dst=/var/log/mysql --expose 3600 mysql:8.0.17
+  197  docker logs 66
+  198  docker ps
+  199  docker logs -f 66
+  200  docker ps
+  201  docker exec -it 66 bash
+  202  docker ps
+  203  docker kill 66
+  204  ls
+  205  vi docker-kubernetes-mysql/volumes/etc/my.cnf 
+  206  docker run -d -e MYSQL_RANDOM_ROOT_PASSWORD=1 --rm --network host --name=mysql8.0 --mount type=bind,src=$DATAVOL,dst=/var/lib/mysql --mount type=bind,src=$ETCVOL/my.cnf,dst=/etc/my.cnf,readonly --mount type=bind,src=$LOGVOL,dst=/var/log/mysql --expose 3600 mysql:8.0.17
+  207  docker logs -f 193
+  208  docker ps
+  209  docker kill 193
+  210  docker ps
+  211  ls
+  212  cd docker-kubernetes-mysql/
+  213  ls
+  214  sudo rm volumes/data/*
+  215  sudo rm -rf volumes/data/*
+  216  sudo rm volumes/log/mysql*
+  217  sudo rm volumes/log/mysql/*
+  218  docker run -d -e MYSQL_RANDOM_ROOT_PASSWORD=1 --rm --network host --name=mysql8.0 --mount type=bind,src=$DATAVOL,dst=/var/lib/mysql --mount type=bind,src=$ETCVOL/my.cnf,dst=/etc/my.cnf,readonly --mount type=bind,src=$LOGVOL,dst=/var/log/mysql --expose 3600 mysql:8.0.17
+  219  docker logs -f aa
+  220  mysql -u root iCahsh7aitheetheekoo6fu9phohrohT
+  221  mysql -u root -p 
+  222  docker run -it mysql mysql -u root -p
+  223  docker run -it mysql mysql -u root -h 127.0.0.1 -p
+  224  docker ps
+  225  docker inspect aad
+  226  sudo yum install less
+  227  sudo yum update
+  228  sudo yum search less
+  229  sudo yum search less|less
+  230  sudo yum install less.x86_64
+  231  docker inspect aad|less
+  232  history
+  233  ifconfig
+  234  sudo yum install mysql-client
+  235  sudo yum search mysql
+  236  sudo yum search mysql|less
+  237  sudo yum install mysql-release-el7.x86_64
+  238  sudo yum search mysql
+  239  sudo yum search mysql|less
+  240  sudo yum install mysql-community-client.x86_64
+  241  docker ps
+  242  docker logs -f aad
+  243  mysql -u root -p -h 127.0.0.1
+  244  vi ~/.my.cnf
+  245  mysql
+  246  vi ~/.my.cnf
+  247  mysql
+  248  ps auxww|grep mysql
+  249  docker ps
+  250  docker kill aa
+  251  vi ~/.my.cnf 
+  252  mysql
+  253  mysql -u root -h 127.0.0.1
+  254  docker ps
+  255  docker kill f
+  256  mysql
+  257  vi ~/.my.cnf 
+  258  mysql
+  259  docker ps
+  260  vi ~/.my.cnf 
+  261  mysql
+  262  ls
+  263  ifconfig
+  264  mysql -h 10.0.11.2
+  265  mysql -h 127.0.0.1
+  266  mysql -p 3306
+  267  cat ~/.my.cnf 
+  268  mysql -P 3306
+  269  docker ps
+  270  docker kill 6
+  271  mysql -h 127.0.0.1
+  272  mysql 
+  273  mysql -h 10.0.11.2
+  274  docker ps
+  275  docker inspect 
+  276  docker inspect --format='{{ .IPaddress }}'
+  277  docker inspect --format='{{ .IPaddress }}' 4
+  278  docker inspect --format='{{ Networking.IPaddress }}' 4
+  279  docker inspect 4 |grep IPA
+  280  mysql -h 172.17.0.2
+  281  docker ps
+  282  docker kill 4
+  283  mysql -h 172.17.0.2
+  284  mysql 
+  285  mysql -h 10.0.11.2
+  286  mysql -h 127.0.0.1
+  287  docker ps
+  288  docker kill eb
+  289  mysql -h 127.0.0.1
+  290  mysql -h 10.0.11.2
+  291  mysql -h 172.17.0.2
+  292  docker ps
+  293  docker kill 0
+  294  mysql -h 172.17.0.2
+  295  mysql -h 10.0.11.2
+  296  mysql -h 127.0.0.1
+  297  docker ps
+  298  kill 19c
+  299  vi hist.txt 
+  300  history
+  301  ls
+  302  docker ps
+  303  docker kill 19
+  304  docker run -d -e MYSQL_RANDOM_ROOT_PASSWORD=1 --rm --name=mysql8.0 --mount type=bind,src=$DATAVOL,dst=/var/lib/mysql --mount type=bind,src=$ETCVOL/my.cnf,dst=/etc/my.cnf,readonly --mount type=bind,src=$LOGVOL,dst=/var/log/mysql --expose 3600 mysql:8.0.17
+  305  docker ps
+  306  mysql
+  307  vi ~/.my.cnf 
+  308  mysql
+  309  docker inspect f
+  310  docker inspect f|less
+  311  vi ~/.my.cnf 
+  312  mysql
+  313  docker ps
+  314  docker kill f
+  315  ls
+  316  docker ps
+  317  docker ps -a
+  318  docker rm $(docker ps -qa)
+  319  sudo docker run -e MYSQL_RANDOM_ROOT_PASSWORD=1 --rm --network host --name=mysql8.0 --mount type=bind,src=$DATAVOL,dst=/var/lib/mysql --mount type=bind,src=$ETCVOL/my.cnf,dst=/etc/my.cnf,readonly --mount type=bind,src=$LOGVOL,dst=/var/log/mysql -p 3600:3600 -p 33060:33060--expose 3600 mysql:8.0.17
+  320  sudo docker run -e MYSQL_RANDOM_ROOT_PASSWORD=1 --rm --network host --name=mysql8.0 --mount type=bind,src=$DATAVOL,dst=/var/lib/mysql --mount type=bind,src=$ETCVOL/my.cnf,dst=/etc/my.cnf,readonly --mount type=bind,src=$LOGVOL,dst=/var/log/mysql -P 3600:3600 -P 33060:33060--expose 3600 mysql:8.0.17
+  321  sudo docker run -e MYSQL_RANDOM_ROOT_PASSWORD=1 --rm --network host --name=mysql8.0 --mount type=bind,src=$DATAVOL,dst=/var/lib/mysql --mount type=bind,src=$ETCVOL/my.cnf,dst=/etc/my.cnf,readonly --mount type=bind,src=$LOGVOL,dst=/var/log/mysql -p 3600:3600 -p 33060:33060 --expose 3600 mysql:8.0.17
+  322  sudo docker run -e MYSQL_RANDOM_ROOT_PASSWORD=1 --rm--name=mysql8.0 --mount type=bind,src=$DATAVOL,dst=/var/lib/mysql --mount type=bind,src=$ETCVOL/my.cnf,dst=/etc/my.cnf,readonly --mount type=bind,src=$LOGVOL,dst=/var/log/mysql -p 3600:3600 -p 33060:33060 --expose 3600 mysql:8.0.17
+  323  sudo docker run -e MYSQL_RANDOM_ROOT_PASSWORD=1 --rm --name=mysql8.0 --mount type=bind,src=$DATAVOL,dst=/var/lib/mysql --mount type=bind,src=$ETCVOL/my.cnf,dst=/etc/my.cnf,readonly --mount type=bind,src=$LOGVOL,dst=/var/log/mysql -p 3600:3600 -p 33060:33060 --expose 3600 mysql:8.0.17
+  324  sudo docker run -e MYSQL_RANDOM_ROOT_PASSWORD=1 --rm --name=mysql8.0 --mount type=bind,src=$DATAVOL,dst=/var/lib/mysql --mount type=bind,src=$ETCVOL/my.cnf,dst=/etc/my.cnf,readonly --mount type=bind,src=$LOGVOL,dst=/var/log/mysql -p 3600:3600 -p 33060:33060 mysql:8.0.17
+  325  sudo docker run -e MYSQL_RANDOM_ROOT_PASSWORD=1 --rm --name=mysql8.0 --mount type=bind,src=$DATAVOL,dst=/var/lib/mysql --mount type=bind,src=$ETCVOL/my.cnf,dst=/etc/my.cnf,readonly --mount type=bind,src=$LOGVOL,dst=/var/log/mysql -p 3600:3600 -p 33060:33060 --expose 3600 mysql:8.0.17
+  326  sudo docker run -e MYSQL_RANDOM_ROOT_PASSWORD=1 --rm --name=mysql8.0 --mount type=bind,src=$DATAVOL,dst=/var/lib/mysql --mount type=bind,src=$ETCVOL/my.cnf,dst=/etc/my.cnf,readonly --mount type=bind,src=$LOGVOL,dst=/var/log/mysql --expose 3600 mysql:8.0.17
+  327  p
+  328  sudo docker run -e MYSQL_RANDOM_ROOT_PASSWORD=1 --rm --name=mysql8.0 --mount type=bind,src=$DATAVOL,dst=/var/lib/mysql --mount type=bind,src=$ETCVOL/my.cnf,dst=/etc/my.cnf,readonly --mount type=bind,src=$LOGVOL,dst=/var/log/mysql --net=host  mysql:8.0.17
+  329  docker ps
+  330  docker logs -f c88
+  331  tmux attach
+  332  docker logs -f c88
+  333  docker ps
+  334  docker kill c88
+  335  docker p
+  336  docker ps -a
+  337  tmux
+  338  ls
+  339  tmux attach
+  340  docker ps
+  341  docker volume create mysql-logs
+  342  docker volume create mysql-data
+  343  docker volume inspect mysql-logs
+  344  docker volume inspect mysql-data
+  345  sudo chown -R 999:999 /var/lib/docker/volumes/mysql-data/_data
+  346  sudo chown -R 999:999 /var/lib/docker/volumes/mysql-logs/_data
+  347  docker run -d -e MYSQL_RANDOM_ROOT_PASSWORD=1 --rm --network host --mount type=volume,src=mysql-data,dst=/var/lib/mysql --mount type=bind,src=$HOME/docker/volumes/etc/my.cnf,dst=/etc/my.cnf,readonly --mount type=volume,src=mysql-logs,dst=/var/log/mysql --expose 3600 --name mysql mysql:8.0.17
+  348  ocker run -d -e MYSQL_RANDOM_ROOT_PASSWORD=1 --rm --network host --mount type=volume,src=mysql-data,dst=/var/lib/mysql --mount type=bind,src=$ETCVOL/etc/my.cnf,dst=/etc/my.cnf,readonly --mount type=volume,src=mysql-logs,dst=/var/log/mysql --expose 3600 --name mysql mysql:8.0.17
+  349  docker run -d -e MYSQL_RANDOM_ROOT_PASSWORD=1 --rm --network host --mount type=volume,src=mysql-data,dst=/var/lib/mysql --mount type=bind,src=$ETCVOL/etc/my.cnf,dst=/etc/my.cnf,readonly --mount type=volume,src=mysql-logs,dst=/var/log/mysql --expose 3600 --name mysql mysql:8.0.17
+  350  ls /home/opc/docker-kubernetes-mysql/volumes/etc/etc/my.cnf
+  351  ls
+  352  docker run -d -e MYSQL_RANDOM_ROOT_PASSWORD=1 --rm --network host --mount type=volume,src=mysql-data,dst=/var/lib/mysql --mount type=bind,src=$ETCVOL/my.cnf,dst=/etc/my.cnf,readonly --mount type=volume,src=mysql-logs,dst=/var/log/mysql --expose 3600 --name mysql mysql:8.0.17
+  353  docker ps
+  354  docker logs 17
+  355  clear
+  356  docker logs 17
+  357  vi .my.cnf 
+  358  mysql
+  359  mysql -h 127.0.0.1
+  360  sudo yum search docker-compose
+  361  sudo yum install docker-compose
+  362  sudo yum search completion
+  363  sudo yum install bash-completion bash-completion-extras 
+  364  docker ps
+  365  docker kill 176
+  366  sudo useradd -s /bin/bin -m patg
+  367  history|grep usermod
+  368  usermod -aG sudo patg
+  369  vi /etc/passwd
+  370  vi /etc/group
+  371  vi /etc/sudoers
+  372  sudo view /etc/sudoers
+  373  sudo su -
+  374  usermod -aG docker patg
+  375  sudo usermod -aG docker patg
+  376  docker login
+  377  docker ps
+  378  docker kill 0a
+  379  ls
+  380  cd docker-kubernetes-mysql/
+  381  ls
+  382  cd files/part_1
+  383  ls
+  384  docker build -t CaptTofu/mysql:8.0.17 .
+  385  docker build -t capttofu/mysql:8.0.17 .
+  386  docker push
+  387  docker push capttofu/mysql:8.0.17
+  388  ls
+  389  docker run busybox
+  390  docker ps
+  391  docker run nginx
+  392  docker run -d -n my-container  nginx
+  393  docker run -d -name my-container  nginx
+  394  docker run -d --name my-container  nginx
+  395  docker ps
+  396  ls
+  397  ps
+  398  ps auxww
+  399  exit
+  400  nsenter --help
+  401  nsenter -t 8049
+  402  exit
+  403  ls
+  404  cd docker-kubernetes-mysql/
+  405  ls
+  406  vi hist.txt 
+  407  lsns 
+  408  sudo lsns
+  409  sudo lsns|grep nginx
+  410  nsenter 
+  411  exit
+  412  docker ps
+  413  PID=$(docker inspect --format {{.State.Pid}} my-container
+  414  PID=$(docker inspect --format {{.State.Pid}} my-container)
+  415  nsenter --target $PID --mount --uts --ipc --net --pid
+  416  sudo nsenter --target $PID --mount --uts --ipc --net --pid
+  417  docker exec -it 81 bash
+  418  sudo nsenter --target $PID --mount --uts --ipc --net --pid
+  419  docker exec -it 81 bash
+  420  history
+  421  lsns
+  422  sudo lsns|grep nginx
+  423  man lsns
+  424  lsns
+  425  sudo lsns
+  426  cd /proc/
+  427  ls
+  428  PID=$(docker inspect --format {{.State.Pid}} my-container)
+  429  cd $PID
+  430  ls
+  431  cat mounts
+  432  ls
+  433  cat pagemap 
+  434  sudo file cgroup
+  435  ls
+  436  ls -lh
+  437  grep -r 8049 *
+  438  vi task/8049/status 
+  439  docker exec -it my-container
+  440  docker exec -it my-container bash
+  441  cd $PID
+  442  env
+  443  echo $PID
+  444  cd $PID
+  445  cd /proc/$PID
+  446  vi task/$PID/status
+  447  cd ns/
+  448  ls
+  449  sudo ls ns
+  450  sudo ls
+  451  sudo cat cgroup
+  452  ls
+  453  sudo ls
+  454  sudo ls -l
+  455  cd ..
+  456  lsns |grep 8049
+  457  lsns
+  458  sudo lsns |grep 8049
+  459  sudo ls
+  460  sudo ls ns
+  461  sudo ls -l ns
+  462  sudo lsns |grep 8049
+  463  cat status 
+  464  cat stat
+  465  docker ps
+  466  docker logs f88
+  467  docker ps
+  468  curl 127.0.0.1:80
+  469  ifconfig
+  470  curl 10.0.11.2:80
+  471  docker ps
+  472  mysql
+  473  mysql -u root -h 127.0.0.1
+  474  docker ps
+  475  docker logs f
+  476  docker inspect f
+  477  mysql -h 172.18.0.2
+  478  docker ps
+  479  docker logs -f 7
+  480  ls
+  481  cd docker-kubernetes-mysql/files/part_1/
+  482  ls
+  483  cd mysql-wordpress/
+  484  ls
+  485  vi docker-compose.yml 
+  486  docker ps
+  487  docker exec -it f88 bash
+  488  cat ~/.my.cnf 
+  489  docker exec -it f88 bash
+  490  vi docker-compose.yml 
+  491  docker-compose down
+  492  docker-compose up
+  493  docker-compose down
+  494  docker ps
+  495  docker inspect cde |grep IPA
+  496  vi docker-compose.yml 
+  497  mysql -u root -p -h 172.22.0.2
+  498  docker-compose 
+  499  docker-compose down
+  500  docker volume ls
+  501  docker volume rm mysqlwordpress_mysql_data mysqlwordpress_mysql_log 
+  502  clear
+  503  docker-compose up 
+  504  ls
+  505  cd ..
+  506  ls
+  507  cd ..
+  508  ls
+  509  git status
+  510  git add part_2/mysql-simple-replication/busybox.yaml
+  511  history
+  512  cd ..
+  513  ls
+  514  history > bastion.history
