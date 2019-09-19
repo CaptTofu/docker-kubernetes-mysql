@@ -12,6 +12,7 @@ spec:
       targetPort: 80
   selector:
     app: wordpress-router
+  type: LoadBalancer
 ---
 apiVersion: extensions/v1beta1
 kind: Deployment
